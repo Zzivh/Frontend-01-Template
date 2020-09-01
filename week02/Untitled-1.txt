@@ -1,0 +1,17 @@
+"a"
+
+"b"
+
+<Program>:= "a" + | "b"+
+
+<Program>:= <Program>"a" + | <Program>"b"+
+
+定义一个数字
+<Number> = "0" | "1" | "2" | ...... | "9"
+定义十进制
+<DecimalNumber> = "0" | (("1" | "2" | ...... | "9") <Number>* )
+定义加法
+<AdditiveExpression> = <MulitiplicativeExpression> | <AdditiveExpression> "+" <MulitiplicativeExpression>
+
+定义乘法
+<MulitiplicativeExpression> = <DecimalNumber> | <MulitiplicativeExpression> "*" <DecimalNumber>
